@@ -1,0 +1,33 @@
+/* Movile and Tablet */
+@media (max-width: 1023px) {
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .slider-item__title {
+        left: 12%;
+        font-size: 2rem;
+        line-height: 2rem;
+        padding: 12px;
+    }
+
+    .slider-item__img {
+        height: 300px;
+    }
+}
+
+/* Movile */
+@media (max-width: 739px) {
+    .slider-item__title {
+        left: 12%;
+        right: 20%;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding: 10px;
+    }
+
+    .slider-item__img {
+        height: 200px;
+    }
+}
