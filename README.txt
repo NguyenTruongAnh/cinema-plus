@@ -9,3 +9,6 @@
 	8. Chạy dòng lệnh "npm start"
 
 	Yêu cầu: Đã cài đặt NodeJS trước đó.
+
+>>>> Video demo:
+	https://www.youtube.com/watch?v=a2dSXIMHkZA&t=427s
