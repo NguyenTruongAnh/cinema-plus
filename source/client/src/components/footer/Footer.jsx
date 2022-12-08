@@ -39,7 +39,7 @@ export default function Footer() {
             <div className="footer-bottom">
                 <div className="grid wide">
                     <p className="footer-copyright">
-                        Copyright © 2021 - Copyright belongs to Nguyễn Trường Anh - 51900699 & Nguyễn Võ Hoàng Vũ - 51900286
+                        Copyright © {new Date().getFullYear()} - Copyright belongs to Nguyễn Trường Anh - 51900699 & Nguyễn Võ Hoàng Vũ - 51900286
                     </p>
                 </div>
             </div>

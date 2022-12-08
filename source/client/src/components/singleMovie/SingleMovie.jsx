@@ -80,7 +80,7 @@ export default function SingleMovie() {
                                     <div className="single-movie__src">
                                         <iframe 
                                             id="iframe" 
-                                            src={"https://www.2embed.ru/embed/tmdb/movie?id=" + movieId} 
+                                            src={"https://2embed.org/embed/movie?tmdb=" + movieId} 
                                             title={movieId}
                                             width="100%" 
                                             height="100%" 

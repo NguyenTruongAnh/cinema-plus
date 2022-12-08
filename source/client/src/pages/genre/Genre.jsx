@@ -38,24 +38,31 @@ export default function Genre() {
     }, [genreId, numPage])
 
     useEffect(() => {
-        const fetchMovies = async () => {
-            const res = await axios.get(`/movies/genre?genreId=${genreId}&page=1`)
+        setIsLoading(true)
 
-            const dataFilter = res.data.filter(movie => movie.poster_path)
-            setMovies([...dataFilter])
+        setTimeout(() => {
+            setIsLoading(true)
 
-            // Loading movies completed in first render
-            setIsLoading(false)
+            const fetchMovies = async () => {
+                const res = await axios.get(`/movies/genre?genreId=${genreId}&page=1`)
+    
+                const dataFilter = res.data.filter(movie => movie.poster_path)
+                setMovies([...dataFilter])
+    
+                // Loading movies completed in first render
+                setIsLoading(false)
+    
+                // Check if we can load more movies when click btn or not
+                setHasMore(res.data.length === 20)
+    
+                setNumPage(1)
+    
+                window.scrollTo(0, 0)
+            }
+    
+            fetchMovies()
+        }, 2000)
 
-            // Check if we can load more movies when click btn or not
-            setHasMore(res.data.length === 20)
-
-            setNumPage(1)
-
-            window.scrollTo(0, 0)
-        }
-
-        fetchMovies()
     }, [genreId])
 
     const handleLoadMore = () => {
